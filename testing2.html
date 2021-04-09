@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+      .modal-content .close {
+        opacity: 1;
+        padding: 0;
+        margin-top: 0;
+        position: absolute;
+        right: -20px;
+        z-index: 99;
+        top: -20px;
+        text-align: center;
+        height: 40px;
+        width: 40px;
+        color: #fff;
+        background-color: #ec2828;
+        border-radius: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Modal</h2>
+    <!-- Trigger the modal with a button -->
+    <button
+      type="button"
+      class="btn btn-info btn-lg"
+      data-toggle="modal"
+      data-target="#myModal"
+    >
+      Open Modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+            <h4 class="modal-title text-center">AVAIL EXCHANGE BONUS</h4>
+            <h4 class="modal-title text-center">ON YOUR OLD CAR</h4>
+          </div>
+          <div class="modal-body">
+            <select name="cars" id="cars" style="width: 100%; padding: 2%">
+              <option
+                value="AN&amp;/-/media/images/feature/arena/channel-specific-global-content/car-brands/alto-800/home-slider-image/alto800.png?modified=20190507114113&amp;{263A0C3C-3B05-4E1C-97C4-D14451249419}"
+              >
+                Alto
+              </option>
+              <option
+                value="WA&amp;/-/media/images/feature/arena/channel-specific-global-content/car-brands/wagon-r/car-image/wagonr.png?modified=20191231102247&amp;{3E7E4FCB-B751-4460-91FD-6AFB437CE5BA}"
+                selected="selected"
+              >
+                WagonR
+              </option>
+              <option
+                value="CE&amp;/-/media/images/feature/arena/channel-specific-global-content/car-brands/celerio/car-image/celerio.png?modified=20181217060612&amp;{6E2DF70F-9402-4CBA-9326-960FE4D172A7}"
+              >
+                Celerio
+              </option>
+              <option
+                value="CX&amp;/-/media/images/feature/arena/channel-specific-global-content/car-brands/celerio-x/car-image/celeriox.png?modified=20181217060834&amp;{8B1B667E-0F71-4EF6-B599-D3DE399C76B3}"
+              >
+                Celerio X
+              </option>
+              <option
+                value="SR&amp;/-/media/images/feature/arena/channel-specific-global-content/car-brands/swift/car-image/swift02.png?modified=20180909045359&amp;{72A2F682-53EB-4634-ACC0-33A67011F135}"
+              >
+                Swift
+              </option>
+              <option
+                value="DR&amp;/-/media/images/feature/arena/channel-specific-global-content/car-brands/dzire/car-image/dzire.png?modified=20180821045505&amp;{CC3E12BF-CF21-403C-8FEA-8A0089C18CE8}"
+              >
+                Dzire
+              </option>
+              <option
+                value="ER&amp;/-/media/images/feature/arena/channel-specific-global-content/car-brands/ertiga/car-image/ertiga.png?modified=20181217083444&amp;{7C755710-3FD3-4DA5-BE62-0B8E5074AB19}"
+              >
+                Ertiga
+              </option>
+              <option
+                value="VB&amp;/-/media/images/feature/arena/channel-specific-global-content/car-brands/brezza/car-image/brezza-page.png?modified=20181217060443&amp;{AF8D4687-0BA2-4A58-95FA-10BD7FD09EAF}"
+              >
+                Vitara Brezza
+              </option>
+              <option
+                value="VR&amp;/-/media/images/feature/arena/channel-specific-global-content/car-brands/eeco/car-image/eeco.png?modified=20190408091932&amp;{458CFF06-EA2E-444C-8663-8E9866C4D982}"
+              >
+                Eeco
+              </option>
+              <option
+                value="SR&amp;/-/media/images/feature/arena/channel-specific-global-content/car-brands/s-presso/car-image/spresso.png?modified=20201127174314&amp;{570A5982-FD35-469E-9E66-02CAF640FBCA}"
+              >
+                S-Presso
+              </option>
+            </select>
+
+            <select
+              name="cars"
+              id="cars"
+              style="width: 100%; padding: 2%; margin-top: 21px"
+            >
+              <option value="465500&amp;WAR4CL100">WAGONR LXI 1.0L</option>
+              <option value="472500&amp;WAR4CLA00">WAGONR LXI 1.0L (O)</option>
+              <option value="498001&amp;WAR4CV100">WAGONR VXI 1.0L</option>
+              <option value="505001&amp;WAR4CVA00">WAGONR VXI 1.0L (O)</option>
+              <option value="533501&amp;WAR4DV100">WAGONR VXI 1.2L</option>
+              <option value="540501&amp;WAR4DVA00">WAGONR VXI 1.2L (O)</option>
+              <option value="545500&amp;WARCCL100">WAGONR LXI CNG</option>
+              <option value="548001&amp;WAA4CV100">WAGONR VXI AGS 1.0L</option>
+              <option value="552500&amp;WARCCLA00">WAGONR LXI(O) CNG</option>
+              <option value="555001&amp;WAA4CVA00">
+                WAGONR VXI AGS 1.0L (O)
+              </option>
+              <option value="568001&amp;WAR4DZ100">WAGONR ZXI 1.2L</option>
+              <option value="583501&amp;WAA4DV100">WAGONR VXI AGS 1.2L</option>
+              <option value="590501&amp;WAA4DVA00">
+                WAGONR VXI AGS 1.2L (O)
+              </option>
+              <option value="618001&amp;WAA4DZ100">WAGONR ZXI AGS 1.2L</option>
+            </select>
+            <h5>How Old is Your Car?</h5>
+            <select name="cars" id="cars" style="width: 100%; padding: 2%">
+              <option value="A">Between 0 - 1 Years</option>
+              <option value="B">Between 1 - 2 Years</option>
+              <option value="C">Between 2 - 3 Years</option>
+              <option value="D">Between 3 - 4 Years</option>
+              <option value="E">Between 4 - 5 Years</option>
+              <option value="F">Between 5 - 6 Years</option>
+              <option value="G">Between 6 - 7 Years</option>
+              <option value="H">Between 7 - 8 Years</option>
+              <option value="J">Between 8 - 9 Years</option>
+              <option value="K">Between 9 - 10 Years</option>
+              <option value="L">Between &gt;10 Years</option>
+            </select>
+
+            <h4 class="modal-title text-left" style="margin-top: 21px">
+              <span style="color: black">&#8377;</span>465500
+
+              <h4
+                class="modal-title text-right"
+                style="margin-top: -26px; font-size: 17px; margin-right: 51px"
+              >
+                Offer Validity
+              </h4>
+              <h4
+                class="modal-title text-right"
+                style="margin-right: 114px; font-size: 17px"
+              >
+                N.A
+              </h4>
+            </h4>
+          </div>
+          <div class="modal-footer">
+            <h4 class="modal-title text-left">Total cash Discount upto</h4>
+            <h4 class="modal-title text-left">
+              <span style="color: black">&#8377;</span>
+            </h4>
+            <button
+              type="button"
+              class="btn btn-default btn-primary"
+              data-dismiss="modal"
+            >
+              Book A Test Drive
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

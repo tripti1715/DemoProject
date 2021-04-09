@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+  />
+    <script
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+      type="text/javascript"
+    ></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>SERVICES</title>
+    <style>
+
+.col-xs-12 {
+    width: 100%;
+    margin-left: 17px;
+}
+ul {
+  list-style-type: none;
+}
+
+
+#pickup{
+font-weight: 700;
+}
+.col-sm-4{
+  margin-bottom: 10px;
+}
+.col-sm-6{
+  margin-bottom: 10px;
+}
+/* li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+} */
+
+    </style>
+
+<script src="js/Index.js"></script>
+<script>
+$(document).ready(function() {
+  $("#disclaimers").hide();
+});
+
+$(document).ready(
+    function(){
+        $("#disclaimerbtnid").click(function () {
+            $("#disclaimers").toggle("slow");
+        });
+ });
+
+</script>
+<script>
+  function myfun()
+  {
+    
+    debugger;
+    var names = document.getElementById("customernames").value ;
+    var emailids = document.getElementById("customerid").value;
+    var Contactsnumber = document.getElementById("customernumber").value;
+    var Drivenss = document.getElementById("kmsdrivns").value;
+    var Addressbox = document.getElementById("address1").value;
+    var Addressbox2 = document.getElementById("address2").value;
+    //var modelselect = $("#ddlcarmodels").val();
+     var modelselect = document.getElementById("ddlcarmodels").value;
+     
+     var yearsselect = document.getElementById("ddlyearsp").value;
+   
+        var usernamecheck = /^[A-Za-z. ]{3,30}$/ ;
+          var passwordcheck = /^[A-Za-z. ]/ ;
+          var emailcheck = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/ ;
+          var mobilecheck = /^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$/;
+          var kmsdriven = /[^0-9]+/;
+          var addresboxed = /^[A-Za-z. ]{3,30}$/;
+  
+         if(usernamecheck.test(names)){
+            document.getElementById('nameerror').innerHTML = "";
+          }
+          else {
+            document.getElementById('nameerror').innerHTML = "*Username is invalid ";
+            return false;
+          }
+          if(emailcheck.test(emailids)){
+            document.getElementById('emailerror').innerHTML = "";
+          }
+          else {
+            document.getElementById('emailerror').innerHTML = "*Email is invalid ";
+            return false;
+          }
+  
+          if(mobilecheck.test(Contactsnumber)){
+            document.getElementById('phonenoerror').innerHTML = "";
+          }
+          else {
+            document.getElementById('phonenoerror').innerHTML = "*Contact No is invalid.";
+            return false;
+          }
+     
+          if(kmsdriven.test(Drivenss)){
+            document.getElementById('kmsdrivenserror').innerHTML = "";
+          }
+          else {
+            document.getElementById('kmsdrivenserror').innerHTML = "Kms Driven is invalid.";
+            return false;
+          }
+          
+          if(addresboxed.test(Addressbox)){
+            document.getElementById('Adressboxeserror').innerHTML = "";
+          }
+          else {
+            document.getElementById('Adressboxeserror').innerHTML = "Address is invalid.";
+            return false;
+          }
+         
+          if(addresboxed.test(Addressbox2)){
+            document.getElementById('Address2error').innerHTML = "";
+          }
+          else {
+            document.getElementById('Address2error').innerHTML = "Address is invalid.";
+            return false;
+          }
+          if (modelselect == "0")
+           {
+            alert("select Model")
+            return false;
+           }
+            if (yearsselect == "0")
+           {
+            alert("select year")
+            return false;
+           }
+          
+        else{
+          swal({
+  title: "You have Successfully Completed the form!",
+  icon: "success",
+  button: "OK",
+});
+          return false;
+        }
+  
+  }
+  
+    
+    </script>
+     
+     </head>
+
+  <body>
+    <!-- ------------navbar start----------------------- -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img src="images/Logos.png" width="254px" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="AboutUs.html"
+                >ABOUT US<span class="sr-only">(current)</span></a
+              >
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                CARS
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">ALTO</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">WAGNOR</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">CELERIO</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">SWIFT</a>
+                <ul></ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Service.html">SERVICE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Accessories.html">ACCESSORIES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Finance.html">FINANCE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="insurance.html">INSURANCE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="DrivingSchool.html">DRIVING SCHOOL</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Careers.html">CAREERS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Contact_Us.html">CONTACT US</a>
+            </li>
+          </ul>
+          <a class="active" href="Index.html"><i class="fa fa-fw fa-home"></i>HOME</a>
+
+          <a class="nav-link" href="#">SIGN UP</a>
+        </div>
+      </div>
+    </nav>
+  
+    <div class="clearfix"></div>
+    <br>    
+    <!------------------navbar end--------------------- -->
+     
+      <!-- ----------------map------------------ -->
+      <div class="headTitle">
+      <h3>SERVICE</h3>
+     </div>
+     
+
+    <div class="container">
+      <form onsubmit="return myfun()">
+        <p>Welcome to 'Book a Service' for your Maruti Suzuki ARENA. Please fill in your car details to receive a call back from our Service Executive for the confirmation of your booking.</p>
+        <h4>Customer Details</h4>
+        <div class="row">
+            
+          <div class="col-sm-4">
+            <input type="text"  class="inputtextboxes" placeholder="Name*"  maxlength="15" id="customernames"  style="
+            width: 100%;
+        ">
+            <span id="nameerror" class="text-danger font-weight-bold"></span>
+          </div>
+          <div class="col-sm-4">
+            <input type="text"  class="inputtextboxes" maxlength="25" placeholder="EmailId*" id="customerid" style="
+            width: 100%;
+        ">
+        <span id="emailerror" class="text-danger font-weight-bold"></span>
+        </div>
+          <div class="col-sm-4"><input type="text" class="inputtextboxes" placeholder="PhoneNumber" maxlength="10" id="customernumber" style="
+            width: 100%;
+        ">
+         <span id="phonenoerror" class="text-danger font-weight-bold"></span></div>
+        </div>
+        <br>
+        
+        <h4>Car Details</h4>
+        <div class="row">
+            
+            <div class="col-sm-4">
+                <select  class="inputtextboxes"   id="ddlcarmodels" style="width:100%">
+                    <option value="0">Model</option>
+                    <option value="Alto">Alto</option>
+                    <option value="WagonR">WagonR</option>
+                    <option value="Celerio">Celerio</option>
+                    <option value="Celerio X">Celerio X</option>
+                    <option value="Swift">Swift</option>
+                    <option value="Dzire">Dzire</option>
+                    <option value="Ertiga">Ertiga</option>
+                    <option value="Vitara Brezza">Vitara Brezza</option>
+                    <option value="Eeco">Eeco</option>
+                    <option value="S-Presso">S-Presso</option>
+                    <option value="Gypsy">Gypsy</option>
+                <option value="Omni">Omni</option>
+
+                  </select>  
+            </div>
+            <div class="col-sm-4">
+              <input type="text" class="inputtextboxes"  maxlength="15" id="kmsdrivns" placeholder="Kms Driven*"  style="
+                width: 100%">
+             <span id="kmsdrivenserror" class="text-danger font-weight-bold"></span></div>
+            
+    
+            <div class="col-sm-4">
+              <select  class="inputtextboxes"  id="ddlyearsp" style="width:100%">
+                <option value="0">Year Of Purchase</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013">2013</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
+                <option value="2009">2009</option>
+                <option value="2008">2008</option>
+                <option value="2007">2007</option>
+                <option value="2006">2006</option>
+                <option value="2005">2005</option>
+                <option value="2004">2004</option>
+                <option value="2003">2003</option>
+                <option value="2002">2002</option>
+                <option value="2001">2001</option>
+                <option value="2000">2000</option>
+                <option value="1999">1999</option>
+                <option value="1998">1998</option>
+                <option value="1997">1997</option>
+                <option value="1996">1996</option>
+                <option value="1995">1995</option>
+                <option value="1994">1994</option>
+                <option value="1993">1993</option>
+                <option value="1992">1992</option>
+                <option value="1991">1991</option>
+                <option value="1990">1990</option>
+                <option value="1989">1989</option>
+                <option value="1988">1988</option>
+                <option value="1987">1987</option>
+                <option value="1986">1986</option>
+                <option value="1985">1985</option>
+                <option value="1984">1984</option>
+                <option value="1983">1983</option>
+                <option value="1982">1982</option>
+                <option value="1981">1981</option>
+                <option value="1980">1980</option>
+                <option value="1979">1979</option>
+                <option value="1978">1978</option>
+                <option value="1977">1977</option>
+                <option value="1976">1976</option>
+                <option value="1975">1975</option>
+                <option value="1974">1974</option>
+                <option value="1973">1973</option>
+                <option value="1972">1972</option>
+                <option value="1971">1971</option>
+                <option value="1970">1970</option>
+                <option value="1969">1969</option>
+                <option value="1968">1968</option>
+                <option value="1967">1967</option>
+                <option value="1966">1966</option>
+                <option value="1965">1965</option>
+                <option value="1964">1964</option>
+                <option value="1963">1963</option>
+                <option value="1962">1962</option>
+                <option value="1961">1961</option>
+                <option value="1960">1960</option>
+                <option value="1959">1959</option>
+                <option value="1958">1958</option>
+                <option value="1957">1957</option>
+                <option value="1956">1956</option>
+                <option value="1955">1955</option>
+                <option value="1954">1954</option>
+                <option value="1953">1953</option>
+                <option value="1952">1952</option>
+                <option value="1951">1951</option>
+                <option value="1950">1950</option>
+                <option value="1949">1949</option>
+                <option value="1948">1948</option>
+                <option value="1947">1947</option>
+                <option value="1946">1946</option>
+                <option value="1945">1945</option>
+                <option value="1944">1944</option>
+                <option value="1943">1943</option>
+                <option value="1942">1942</option>
+                <option value="1941">1941</option>
+                <option value="1940">1940</option>
+                <option value="1939">1939</option>
+                <option value="1938">1938</option>
+                <option value="1937">1937</option>
+                <option value="1936">1936</option>
+                <option value="1935">1935</option>
+                <option value="1934">1934</option>
+                <option value="1933">1933</option>
+                <option value="1932">1932</option>
+                <option value="1931">1931</option>
+                <option value="1930">1930</option>
+                <option value="1929">1929</option>
+                <option value="1928">1928</option>
+                <option value="1927">1927</option>
+                <option value="1926">1926</option>
+                <option value="1925">1925</option>
+                <option value="1924">1924</option>
+                <option value="1923">1923</option>
+                <option value="1922">1922</option>
+                <option value="1921">1921</option>
+
+              </select></div>
+
+                             
+              
+          </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 form-group" style="
+            margin-left: -50px;
+        ">
+                      <ul>
+                        <li class="radiobuttons" id="pickup" style="
+    float: left;
+">Pick up</li>
+                        <li class="radiobuttons" style="margin-left: 12px;float: left;">
+                            <input type="radio" checked="" id="pick1" name="cf">
+                            <label for="pick1">Yes</label>
+                        </li>
+                        <li class="radiobuttons" style="margin-left: 17px;float: left;">
+                            <input type="radio" id="pick2" name="cf">
+                            <label for="pick2">No</label>
+                        </li>
+                    </ul>              
+                  </div>         
+                  
+                  <br>
+            <div class="row">
+                <div class="col-sm-6">
+        <input type="text" class="inputtextboxes" id="address1" maxlength="25" placeholder="Address Line 1*" style="
+                    width: 100%;">
+                     <span id="Adressboxeserror" class="text-danger font-weight-bold"></span>
+    </div>
+                <div class="col-sm-6"><input type="text" class="inputtextboxes" maxlength="25" id="address2" placeholder="Address Line 2" style="
+                    width: 100%;
+                ">
+                   <span id="Address2error" class="text-danger font-weight-bold"></span> 
+                </div>
+      </div>
+      <br>
+    <div class="row marginbottom10">
+      <div class="col-xs-12">
+          <div style="text-align:left;">
+              <label for="disclaimer"><input required type="checkbox" id="disclaimer"> I have read and understood the <a href="javascript:void(0);" class="disclaimerbtn" id="disclaimerbtnid">disclaimer</a></label>
+               <div class="disclaimerbox" id="disclaimers">
+                  <p>Disclaimer: I agree that by clicking the ‘Submit’ button below, I am explicitly soliciting a call from Maruti Suzuki India Ltd. Or its partners on my 'Mobile'.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <br>
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <button type="submit btn-primary"  style="
+            width: 200px;
+            height: 48px;
+            padding: 8px;
+            color: #04204e;;
+            background-color: #04204e;
+            color: white;
+        ">SUBMIT</button>
+        </div>
+    </div>
+    </form>
+      </div>
+  
+
+        
+  <!-- ------------------------map end----------------------- -->
+      <!-- --------------Footer-start------------------- -->
+      <footer class="mainfooter" role="contentinfo">
+        <div class="footer-middle">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3 col-sm-6">
+                <!--Column1-->
+                <div class="footer-pad">
+                  <h4>CORPORATE</h4>
+                  <ul class="list-unstyled">
+                    <li><a href="#"></a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Investors</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Media</a></li>
+                    <li><a href="#">Reach us</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <!--Column1-->
+                <div class="footer-pad">
+                  <h4>SALES</h4>
+                  <ul class="list-unstyled">
+                    <li><a href="#">MARUTI SUZUKI ARENA</a></li>
+                    <li><a href="#">Nexa</a></li>
+                    <li><a href="#">True Value</a></li>
+                    <li><a href="#">Commercial</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <!--Column1-->
+                <div class="footer-pad">
+                  <h4>MORE FROM US</h4>
+                  <ul class="list-unstyled">
+                    <li><a href="#">Maruti Suzuki Driving School</a></li>
+                    <li><a href="#">Maruti Suzuki Finance</a></li>
+                    <li><a href="#">Maruti Insurance</a></li>
+                    <li><a href="#">Maruti Suzuki Rewards/a></li>
+                    <li><a href="#">Maruti Suzuki Geniune Accessories</a></li>
+                    <li>
+                      <a href="#"></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <!--Column1-->
+                <div class="footer-pad">
+                  <h4>CONTACT US</h4>
+                  <ul class="list-unstyled">
+                    <li><a href="#">1800 102 1800</a></li>
+                    <li><a href="#">contact@maruti.co.in</a></li>
+                    <h4>Follow Us</h4>
+                    <ul class="social-network social-circle">
+                      <li>
+                        <a href="#" class="icoFacebook" title="Facebook"
+                          ><i class="fa fa-facebook"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a href="#" class="icoLinkedin" title="Linkedin"
+                          ><i class="fa fa-linkedin"></i
+                        ></a>
+                      </li>
+                    </ul>
+                   <a href="#"></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+                      </div>
+            <div class="row">
+              <div class="col-md-12 copy">
+                <div class="text-center text-white p-3" style="background-color: #04204e;">
+                  © 2021 Copyright:
+                  <a class="text-white" href="https://www.marutisuzuki.com/">marutisuzuki.com</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <!-- Scripts -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+    <script type="text/jvascript" src="js/popper.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
+
+  
+  </body>
+</html>
